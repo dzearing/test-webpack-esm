@@ -25,4 +25,4 @@ Resulted output:
 import*as r from"@fluentui/utilities";var e={d:(r,t)=>{for(var o in t)e.o(t,o)&&!e.o(r,o)&&Object.defineProperty(r,o,{enumerable:!0,get:t[o]})},o:(r,e)=>Object.prototype.hasOwnProperty.call(r,e)},t={};e.d(t,{K:()=>o}),e.d({},{});const o="bar";var a=t.K;export{a as bar};
 ```
 
-Note the `index.js`, which exports * from `utilities.js`. If this is used as the entry point, the result should be the same. (ESBuild has a bug in this situation which hasn't been resolved for some time. https://github.com/evanw/esbuild/issues/1737)
+The repo also has an `index.js` file which exports * from `utilities.js`. If this is used as the entry point in the `webpack.config.js`, the expected/resulted output are the same. (ESBuild has a bug in this situation where the entry doesn't export the external library from the entrypoint which hasn't been resolved for some time. https://github.com/evanw/esbuild/issues/1737)
